@@ -36,3 +36,14 @@ body {
   font-size: 56px;
   margin-right: 16px;
 }
+
+.card-custom__footer {
+  padding: 24px 0;
+  border-top: 1px solid rgb(235, 235, 235);
+  text-align: center;
+}
+
+.card-custom__footer a {
+  color: #9747ff;
+  font-weight: 500;
+}
