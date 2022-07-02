@@ -1,0 +1,38 @@
+body {
+  background-color: #e4ccff;
+}
+.card-custom {
+  padding: 32px;
+  background-color: #fff;
+  margin-top: 40px;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #9747ff;
+  border-color: #9747ff;
+}
+
+.btn-primary:hover {
+  background-color: #9e5af7;
+  border-color: #9e5af7;
+}
+
+.weather-card {
+  border: 1px solid #e4ccff;
+  padding: 16px;
+  text-align: center;
+}
+.weather-card p:last-child {
+  margin-bottom: 0;
+}
+
+.weather-card i {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.icon i {
+  font-size: 56px;
+  margin-right: 16px;
+}
