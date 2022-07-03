@@ -6,7 +6,7 @@ function formatDate(now) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let day = days[now.getDay()];
   let hours = now.getHours();
@@ -56,6 +56,11 @@ function showTemperature(response) {
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   let description = document.querySelector("#description");
   description.innerHTML = `${response.data.weather[0].description}`;
+  let weatherIcon = document.querySelector("#icon");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function search(event) {
