@@ -12,6 +12,10 @@ h3 {
   font-weight: 700;
 }
 
+h1 {
+  font-size: 32px;
+}
+
 a {
   color: #7d76ff;
 }
@@ -104,4 +108,18 @@ footer a {
   font-size: 26px;
   font-weight: 700;
   color: #7d76ff;
+}
+
+#description::first-letter {
+  text-transform: capitalize;
+}
+
+.city-weather__info a.active {
+  color: #6c757d;
+}
+
+.city-weather__info a.active:hover {
+  color: #6c757d;
+  text-decoration: none;
+  cursor: default;
 }
