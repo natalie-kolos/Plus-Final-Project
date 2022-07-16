@@ -10,6 +10,12 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <script
       src="https://kit.fontawesome.com/85aca76629.js"
@@ -19,97 +25,130 @@
     <title>SheCodesPlus-HW</title>
   </head>
   <body>
-    <div class="container">
-      <div class="card-custom">
-        <div class="d-flex mb-4">
-          <button type="button" class="btn btn-primary mr-2">Kyiv</button>
-          <button type="button" class="btn btn-primary mr-2">Warsaw</button>
-          <button type="button" class="btn btn-primary mr-2">Berlin</button>
-          <button type="button" class="btn btn-primary mr-2">Rome</button>
-          <button type="button" class="btn btn-primary mr-2">Madrid</button>
-        </div>
-
-        <form class="form-inline mb-5" id="search-form">
-          <input
-            type="text"
-            class="form-control flex-grow-1 mr-3"
-            placeholder="Enter a city"
-            aria-label="Enter a city"
-            aria-describedby="button-addon2"
-          />
-
-          <button
-            class="btn btn-outline-secondary mr-3"
-            type="submit"
-            id="button-addon2"
-          >
-            Search
-          </button>
-          <button type="button" class="btn btn-light" id="current">
-            Current
-          </button>
-        </form>
-
-        <div class="d-flex justify-content-between mb-5">
-          <div class="city">
-            <h1></h1>
-            <p class="mb-1 text-secondary">
-              Last updated: <span id="date"></span>
-            </p>
-            <p id="description" class="mb-1 text-secondary"></p>
-          </div>
-          <div class="d-flex align-items-start">
-            <img id="icon" src="#" alt="" />
-            <div class="city-weather__info">
-              <h2 id="temp"></h2>
-              <a href="#" id="celcius" class="h6">°C</a>
-              <span class="h6 text-black-50">|</span>
-              <a href="#" id="farenheit" class="h6">F</a>
-              <p id="humidity" class="mb-1 text-secondary"></p>
-              <p id="wind" class="mb-1 text-secondary"></p>
-            </div>
-          </div>
-        </div>
+    <div class="content">
+      <div class="container">
         <div class="row">
-          <div class="col">
-            <div class="weather-card">
-              <p>Mon</p>
-              <i class="fa-regular fa-sun"></i>
-              <p>21°</p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="weather-card">
-              <p>Tue</p>
-              <i class="fa-regular fa-sun"></i>
-              <p>22°</p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="weather-card">
-              <p>Wed</p>
-              <i class="fa-regular fa-sun"></i>
-              <p>23°</p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="weather-card">
-              <p>Thu</p>
-              <i class="fa-regular fa-sun"></i>
-              <p>26°</p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="weather-card">
-              <p>Fri</p>
-              <i class="fa-regular fa-sun"></i>
-              <p>28°</p>
+          <div class="col-md-8 offset-md-2">
+            <div class="card-custom">
+              <div class="card-custom__header text-center">
+                <a href="#" class="navbar-brand">Weather App</a>
+              </div>
+
+              <form class="form-inline mb-3" id="search-form">
+                <input
+                  type="text"
+                  class="form-control flex-grow-1 mr-3"
+                  placeholder="Enter a city"
+                  aria-label="Enter a city"
+                  aria-describedby="button-addon2"
+                />
+
+                <button
+                  class="btn btn-primary mr-3"
+                  type="submit"
+                  id="button-addon2"
+                >
+                  Search
+                </button>
+                <button type="button" class="btn btn-secondary" id="current">
+                  My Location
+                </button>
+              </form>
+              <div class="d-flex mb-5">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-sm mr-2"
+                >
+                  Kyiv
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-sm mr-2"
+                >
+                  Warsaw
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-sm mr-2"
+                >
+                  Berlin
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-sm mr-2"
+                >
+                  Rome
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-sm mr-2"
+                >
+                  Madrid
+                </button>
+              </div>
+
+              <div class="d-flex justify-content-between mb-5">
+                <div class="city">
+                  <h1></h1>
+                  <p class="mb-1 text-secondary">
+                    Last updated: <span id="date"></span>
+                  </p>
+                  <p id="description" class="mb-1 text-secondary"></p>
+                </div>
+                <div class="d-flex align-items-start">
+                  <img id="icon" src="#" alt="" />
+                  <div class="city-weather__info">
+                    <h2 id="temp"></h2>
+                    <a href="#" id="celcius" class="h6">°C</a>
+                    <span class="h6 text-black-50">|</span>
+                    <a href="#" id="farenheit" class="h6">F</a>
+                    <p id="humidity" class="mb-1 text-secondary"></p>
+                    <p id="wind" class="mb-1 text-secondary"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="weather-card">
+                    <p>Mon</p>
+                    <i class="fa-regular fa-sun"></i>
+                    <p>21°</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="weather-card">
+                    <p>Tue</p>
+                    <i class="fa-regular fa-sun"></i>
+                    <p>22°</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="weather-card">
+                    <p>Wed</p>
+                    <i class="fa-regular fa-sun"></i>
+                    <p>23°</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="weather-card">
+                    <p>Thu</p>
+                    <i class="fa-regular fa-sun"></i>
+                    <p>26°</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="weather-card">
+                    <p>Fri</p>
+                    <i class="fa-regular fa-sun"></i>
+                    <p>28°</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="card-custom__footer">
-          This project was coded by <strong>Natalie Kolos</strong> and is
-          open-sourced on
+        <footer>
+          This project was coded by Natalie Kolos and is open-sourced on
           <a
             href="https://github.com/natalie-kolos/shecodes-homework-week-6"
             target="_blank"
@@ -117,7 +156,7 @@
           >
           and hosted on
           <a href="https://courageous-syrniki-0884c8.netlify.app/">Netlify</a>
-        </div>
+        </footer>
       </div>
     </div>
     <script src="js/custom.js"></script>
