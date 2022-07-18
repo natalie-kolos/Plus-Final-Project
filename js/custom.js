@@ -110,9 +110,11 @@ function search(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
-function doQuickSearch(event) {
+//Quick Search Kyiv
+
+function doQuickSearchKyiv(event) {
   event.preventDefault();
-  let quickSearchBtn = document.querySelector(".quick-search");
+  let quickSearchBtn = document.querySelector("#quick-search_kyiv");
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${quickSearchBtn.innerHTML}`;
   let searchInput = document.querySelector(".form-control");
@@ -125,8 +127,88 @@ function doQuickSearch(event) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-let quickSearch = document.querySelector(".quick-search");
-quickSearch.addEventListener("click", doQuickSearch);
+let quickSearchKyiv = document.querySelector("#quick-search_kyiv");
+quickSearchKyiv.addEventListener("click", doQuickSearchKyiv);
+
+//Quick Search Berlin
+
+function doQuickSearchWarsaw(event) {
+  event.preventDefault();
+  let quickSearchBtn = document.querySelector("#quick-search_warsaw");
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = `${quickSearchBtn.innerHTML}`;
+  let searchInput = document.querySelector(".form-control");
+  searchInput.value = `${quickSearchBtn.innerHTML}`;
+  searchInput.value = searchInput.value.trim();
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let city = searchInput.value.trim();
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+let quickSearchWarsaw = document.querySelector("#quick-search_warsaw");
+quickSearchWarsaw.addEventListener("click", doQuickSearchWarsaw);
+
+//Quick Search Berlin
+
+function doQuickSearchBerlin(event) {
+  event.preventDefault();
+  let quickSearchBtn = document.querySelector("#quick-search_berlin");
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = `${quickSearchBtn.innerHTML}`;
+  let searchInput = document.querySelector(".form-control");
+  searchInput.value = `${quickSearchBtn.innerHTML}`;
+  searchInput.value = searchInput.value.trim();
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let city = searchInput.value.trim();
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+let quickSearchBerlin = document.querySelector("#quick-search_berlin");
+quickSearchBerlin.addEventListener("click", doQuickSearchBerlin);
+
+//Quick Search Rome
+
+function doQuickSearchRome(event) {
+  event.preventDefault();
+  let quickSearchBtn = document.querySelector("#quick-search_rome");
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = `${quickSearchBtn.innerHTML}`;
+  let searchInput = document.querySelector(".form-control");
+  searchInput.value = `${quickSearchBtn.innerHTML}`;
+  searchInput.value = searchInput.value.trim();
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let city = searchInput.value.trim();
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+let quickSearchRome = document.querySelector("#quick-search_rome");
+quickSearchRome.addEventListener("click", doQuickSearchRome);
+
+//Quick Search Mardid
+
+function doQuickSearchMardid(event) {
+  event.preventDefault();
+  let quickSearchBtn = document.querySelector("#quick-search_madrid");
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = `${quickSearchBtn.innerHTML}`;
+  let searchInput = document.querySelector(".form-control");
+  searchInput.value = `${quickSearchBtn.innerHTML}`;
+  searchInput.value = searchInput.value.trim();
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let city = searchInput.value.trim();
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+let quickSearchMardid = document.querySelector("#quick-search_madrid");
+quickSearchMardid.addEventListener("click", doQuickSearchMardid);
 
 function showLocation(position) {
   console.log(position.coords.latitude);
