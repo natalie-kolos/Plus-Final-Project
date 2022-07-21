@@ -127,3 +127,7 @@ footer a {
   text-decoration: none;
   cursor: default;
 }
+
+.city-weather__info {
+  min-width: 136px;
+}
